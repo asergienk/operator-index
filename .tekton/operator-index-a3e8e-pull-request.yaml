@@ -42,8 +42,6 @@ spec:
       _Uses `buildah` to create a container image. Its build-time tests are limited to verifying the included catalog and do not scan the image.
       This pipeline is pushed as a Tekton bundle to [quay.io](https://quay.io/repository/konflux-ci/tekton-catalog/pipeline-fbc-builder?tab=tags)_
     params:
-    - name: output-image-repo
-      value: quay.io/redhat-user-workloads/asergien-tenant/add-task-manually/operator-index-a3e8e
     - description: Source Repository URL
       name: git-url
       type: string
@@ -54,7 +52,7 @@ spec:
     - description: Output Image Tag. Will be qualified with output-image-repo.
       name: output-image-tag
       type: string
-    - default: quay.io/rhacs-eng/stackrox-operator-index
+    - default: quay.io/redhat-user-workloads/asergien-tenant/add-task-manually/konflux-operator-index-a3e8e
       description: Output Image Repository
       name: output-image-repo
       type: string
