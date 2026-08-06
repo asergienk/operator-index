@@ -191,7 +191,7 @@ spec:
     - name: SOURCE_ARTIFACT
       value: $(tasks.clone-repository.results.SOURCE_ARTIFACT)
     - name: ociStorage
-      value: $(params.output-image-repo).lifecycle
+      value: $(params.output-image-repo):konflux-$(params.revision).lifecycle
     - name: ociArtifactExpiresAfter
       value: $(params.image-expires-after)
     - name: BUILD_ARGS
@@ -369,11 +369,6 @@ spec:
       operator: in
       values: ["false"]
 
-    workspaces:
-    - name: git-auth
-      optional: true
-    - name: netrc
-      optional: true
   taskRunTemplate:
     serviceAccountName: build-pipeline-operator-index-a3e8e
   workspaces:
