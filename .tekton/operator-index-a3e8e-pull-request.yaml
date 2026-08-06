@@ -136,9 +136,6 @@ spec:
 
   tasks:
 
-  - name: post-metric-start
-    taskRef: *post-bigquery-metrics-ref
-
   - name: init
     params:
     - name: enable-cache-proxy
