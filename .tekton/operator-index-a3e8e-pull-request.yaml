@@ -52,7 +52,7 @@ spec:
     - description: Output Image Tag. Will be qualified with output-image-repo.
       name: output-image-tag
       type: string
-    - default: quay.io/redhat-user-workloads/asergien-tenant/konflux-operator-index-a3e8e
+    - default: quay.io/redhat-user-workloads-stage/asergien-tenant/operator-index-a3e8e
       description: Output Image Repository
       name: output-image-repo
       type: string
