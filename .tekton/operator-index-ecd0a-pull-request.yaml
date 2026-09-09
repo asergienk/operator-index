@@ -195,7 +195,8 @@ spec:
         value: $(params.dockerfile)
       - name: BUILD_ARGS
         value:
-        - $(params.build-args[*])
+        - "base-image=registry.redhat.io/openshift5/ose-operator-registry-rhel9:v5.0"
+        - "catalog-dir=catalog-csv-metadata"
       runAfter:
       - clone-repository
       taskRef:
