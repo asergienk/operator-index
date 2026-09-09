@@ -33,6 +33,10 @@ spec:
     value: catalog.Containerfile
   - name: path-context
     value: .
+  - name: base-image
+    value: registry.redhat.io/openshift5/ose-operator-registry-rhel9:v5.0
+  - name: catalog-dir
+    value: catalog-csv-metadata
   pipelineSpec:
     description: |
       This pipeline is ideal for building and verifying [file-based catalogs](https://konflux-ci.dev/docs/end-to-end/building-olm/#building-the-file-based-catalog).
